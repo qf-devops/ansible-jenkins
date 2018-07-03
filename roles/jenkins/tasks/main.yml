@@ -1,0 +1,31 @@
+---
+- name: Install add-apt-repostory
+  become: yes
+  apt: name=software-properties-common state=latest
+
+#- name: Download jenkins-ci.org.key
+ # get_url:
+  #  url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+   # dest: /tmp/jenkins-ci.org.key
+    #mode: 0440
+
+- name: Add an Apt signing key of  jenkins-ci.org.key
+  apt_key:
+    url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+    state: present
+
+- apt_repository:
+    repo: deb http://pkg.jenkins.io/debian-stable binary/
+    state: present
+    filename: 'jenkins.list'
+
+- name: Install jenkins  
+  become: yes
+  apt: name={{item}} state=latest
+  with_items:
+    - jenkins
+
+- name: Start service jenkins, if not running
+  service:
+    name: jenkins
+    state: started

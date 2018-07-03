@@ -1,0 +1,7 @@
+---
+- hosts: webserver
+  sudo: true
+  roles:
+    -  ansible-java8-oracle
+    -  jenkins
+

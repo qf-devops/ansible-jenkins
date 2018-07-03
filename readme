@@ -1,0 +1,3 @@
+
+
+ansible-playbook -i jenkins.ini jenkins.yml
