@@ -1,3 +1,29 @@
 
 
 ansible-playbook -i jenkins.ini jenkins.yml
+
+
+Ansible Installation:
+
+  ubuntu:
+ sudo apt-get install software-properties-common  && \
+  sudo apt-add-repository ppa:ansible/ansible && \
+  sudo apt-get update && \
+ sudo apt-get install ansible
+
+
+Centos7
+
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+sudo yum install ansible -y
+
+
+generate the ssh keyt:
+
+   ssh-keygen   + 4 times enter
+   
+   ssh-copy-id -i hostname
+     or 
+     copy the public into authorized_key in target host
+   
