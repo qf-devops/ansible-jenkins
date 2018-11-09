@@ -4,4 +4,5 @@
   roles:
     -  ansible-java8-oracle
     -  jenkins
+    -  maven
 
