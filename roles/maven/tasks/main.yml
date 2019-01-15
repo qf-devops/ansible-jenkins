@@ -9,7 +9,7 @@
 
 - name: Install maven
   become: yes
-  apt: name=maven3 state=latest
+  apt: name=maven state=latest
 
 
 
