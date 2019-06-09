@@ -5,7 +5,7 @@
 
 - name: Add Oracle Java Repository
   become: yes
-  apt_repository: repo='ppa:webupd8team/java'
+  apt_repository: repo='ppa:openjdk-r/ppa'
 
 - name: Accept Java 8 License
   become: yes
