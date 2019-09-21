@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: "{{ group_name }}"
   sudo: true
   roles:
     -  ansible-java8-oracle
