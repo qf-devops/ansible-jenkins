@@ -1,1 +1,1 @@
-ansible-playbook -i jenkins.ini script.yml
+ansible-playbook -i jenkins.ini jenkins.yml -e "packagename=jdk10"
