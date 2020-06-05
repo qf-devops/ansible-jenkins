@@ -1,12 +1,4 @@
 ---
-- name: Install add-apt-repostory
-  become: yes
-  apt: name=software-properties-common state=latest
-
-- name: Add Oracle maven Repository
-  become: yes
-  apt_repository: repo='ppa:andrei-pozolotin/maven3'
-
 - name: Install maven
   become: yes
   apt: name=maven state=latest
