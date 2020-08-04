@@ -17,7 +17,7 @@
 - apt_repository:
     repo: deb http://pkg.jenkins-ci.org/debian-stable binary/
     state: present
-    filename: 'jenkins'
+    filename: 'jenkins.list'
 
 - name: Install jenkins  
   become: yes
