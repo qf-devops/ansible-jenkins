@@ -11,19 +11,17 @@
 
 - name: Add an Apt signing key of  jenkins-ci.org.key
   apt_key:
-    url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+    url: http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key
     state: present
 
 - apt_repository:
-    repo: deb http://pkg.jenkins.io/debian-stable binary/
+    repo: deb http://pkg.jenkins-ci.org/debian-stable binary
     state: present
     filename: 'jenkins.list'
 
 - name: Install jenkins  
   become: yes
-  apt: name={{item}} state=latest
-  with_items:
-    - jenkins
+  apt: name=jenkins state=latest
 
 - name: Start service jenkins, if not running
   service:
