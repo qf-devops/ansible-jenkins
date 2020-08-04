@@ -2,6 +2,6 @@
 - hosts: "{{ group_name }}"
   roles:
     -  ansible-java8-oracle
-    #-  jenkins
+    -  jenkins
     -  maven
 
