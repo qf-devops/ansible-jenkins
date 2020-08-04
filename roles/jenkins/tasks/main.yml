@@ -15,7 +15,7 @@
     state: present
 
 - apt_repository:
-    repo: deb http://pkg.jenkins-ci.org/debian-stable binary
+    repo: deb http://pkg.jenkins-ci.org/debian-stable binary/
     state: present
     filename: 'jenkins.list'
 
