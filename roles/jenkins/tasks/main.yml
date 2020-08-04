@@ -13,7 +13,6 @@
   apt_key:
     url: http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key
     state: present
-
 - apt_repository:
     repo: deb http://pkg.jenkins-ci.org/debian-stable binary/
     state: present
