@@ -11,7 +11,7 @@
 
 - name: Add an Apt signing key of  jenkins-ci.org.key
   apt_key:
-    url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
     state: present
 
 - apt_repository:
