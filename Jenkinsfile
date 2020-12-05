@@ -3,6 +3,6 @@ node('ansible-label'){
    checkout scm
   }
   stage("ansible"){
-   ansiblePlaybook disableHostKeyChecking: true, extras: '"group_name=jenkins"', forks: 2, inventory: 'inventory.yml', playbook: 'jenkins.yml'
+   ansiblePlaybook disableHostKeyChecking: true, extras: '-e "group_name=jenkins"', forks: 2, inventory: 'inventory.yml', playbook: 'jenkins.yml'
   }
 }
