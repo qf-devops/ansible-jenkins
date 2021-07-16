@@ -1,1 +1,1 @@
-ansible-playbook -i jenkins.ini jenkins.yml -e "packagename=jdk10"
+ansible-playbook -i inventory.yml jenkins.yml -e "group_name=localhost"
